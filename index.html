@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+    text-align: center;
+}
+
+div {
+    padding-top: 50%;
+    margin: auto;
+    max-width: 33.33%;
+}
+
+.case {
+    font-size: large;
+    font-family: sans-serif;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: aqua;
+    border-radius: 20%;
+    opacity: 0; /* თავიდან უხილავი */
+    transform: scale(0.5); /* დაპატარავებული */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    pointer-events: none; /* თავიდან კლიკებს არ იღებს */
+}
+
+section span {
+    max-width: 80%;
+    font-weight: bold;
+    transition: all 10s;
+}
+
+img {
+    margin-top: 20px;
+    width: 40%;
+    border-radius: 100%;
+    background-color: red;
+    transition: all 10s;
+
+}
+  
+.active {
+    opacity: 1; /* ნელა ჩნდება */
+    transform: scale(1); /* იზრდება ნორმალურ ზომამდე */
+    pointer-events: auto; /* კლიკებადს აქცევს */
+}
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h2 class="case">გინდა ქეისები?</h2>
+        <button onclick="ib()">დააჭირე</button>
+        
+    </div>
+
+    <section id="sect" class="">
+        <span>შეიძინე უმაღლესი ხარისხის ქეისები IB Accessoriesში, ყველაზე ბიუჯეტურ ფასად.</span>
+        <img src="https://scontent.ftbs5-3.fna.fbcdn.net/v/t39.30808-6/469651940_593337379871040_59281243088966217_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=XqHileEZQlEQ7kNvgHwMmxM&_nc_oc=AdlecrwGqYo5K514ryZiYRkPFOb4ez8_53yrZNdeNPLV1q3IclyA6yF-pDf8fJIs_X0&_nc_zt=23&_nc_ht=scontent.ftbs5-3.fna&_nc_gid=SbmgXWRRTJUMsbZZc7Ycvg&oh=00_AYFD3rybqZrj1SSXUa1P7E3MKT2eH3TkCNDoSAVlrq--4g&oe=67E1C087" alt="IBAccessories LOGO">
+    </section>
+
+    <script>
+        function ib() {
+            document.querySelector("#sect").classList.add("active");
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>
